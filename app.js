@@ -34,6 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
           },
      ];
 
+     cardsChosen = [];
+     cardsChosenId = [];
+
      function createBoard() {
           const grid = document.querySelector(".grid");
           for (i = 0; i < cardArray.length; i++) {
@@ -49,6 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
      function flipCard() {
           debugger;
           let cardId = this.getAttribute("data-id");
+          cardsChosen.push(cardArray[cardId].name);
+          cardsChosen.push(cardId);
+          this.setAttribute("src");
      }
 
      // check for match
